@@ -1,0 +1,12 @@
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  height: 520px;
+  width: 100%;
+  background-image: url('../images/tweeter-bg-2.png');
+  
+}
