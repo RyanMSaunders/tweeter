@@ -1,16 +1,18 @@
 
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100px;
+  height: 120px;
   width: 100vw;
   color: #FFFFFF;
   background-color: #4056A1;
   padding: 0px 1.5em
 }
 
-nav span {
+.nav-title {
   font-family: 'Bungee';
   display: flex;
   flex-direction: column;
