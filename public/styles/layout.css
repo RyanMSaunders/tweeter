@@ -36,5 +36,43 @@ body nav {
   align-items: center;
   margin-right: 5%;
   margin-left: 5%;
-  background-color: #f4f1ec;
+  margin-top: 5%;
+  background-color: inherit;
+ }
+
+ .new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: inherit;
+ }
+
+ .submit-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2%;
+  font-family: 'Bungee';
+ }
+
+ .text-area {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid  #545149;
+ }
+
+ #tweet-text {
+  color: #545149;
+  background: transparent;
+  border: none;
+  outline: none; 
+ }
+
+ #tweet-button {
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  border: none;
+  font-size: large;
  }
