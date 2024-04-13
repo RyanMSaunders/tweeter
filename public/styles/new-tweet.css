@@ -35,3 +35,7 @@
   border: none;
   font-size: large;
  }
+
+ .counter-negative {
+  color: red;
+ }
