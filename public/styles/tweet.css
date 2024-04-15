@@ -1,4 +1,6 @@
 
+/* Styling Tweet Section*/
+
 .tweet-section {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -14,6 +16,7 @@ section.tweet-section:hover {
   filter: drop-shadow(9px 6px 1px #adb8dc);
 }
 
+/* Styling Items In Article */
 
 section.tweet-section article.tweet {
   display: flex;
@@ -25,7 +28,7 @@ section.tweet-section article.tweet {
   margin-bottom: 2%;
 }
 
-
+/* Styling Header */
 
 article.tweet header {
   display: flex;
@@ -51,7 +54,7 @@ article.tweet header > p {
   opacity: 50%;
 }
 
-/* Targeting hr element */
+/* Styling hr element */
 
 div#tweet-divider {
   margin-left: -1%;
@@ -72,6 +75,7 @@ div > hr {
 
 
 /* Styling Footer */
+
 footer.tweet-footer {
   display: flex;
   flex-direction: row;
