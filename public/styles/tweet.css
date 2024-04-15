@@ -1,0 +1,101 @@
+
+.tweet-section {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: inherit;
+  border: 5px solid;
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+/* Hovering over tweet container */
+section.tweet-section:hover {
+  filter: drop-shadow(9px 6px 1px #adb8dc);
+}
+
+
+section.tweet-section article.tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+article.tweet div.user-identifier {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 200;
+}
+
+article.tweet img {
+  height: 70px;
+  margin-left: -12px;
+}
+
+article.tweet header > p {
+  opacity: 50%;
+}
+
+/* Targeting hr element */
+
+div#tweet-divider {
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
+div > hr { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border-color: #545149;
+  border-width: 5px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+
+/* Styling Footer */
+footer.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+footer.tweet-footer p {
+  margin-top: 0px;
+}
+
+footer.tweet-footer div.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 15px;
+  color: #4056A1;
+}
+
+footer.tweet-footer div.footer-icons > i:hover {
+  color: #d89922;
+}
+
+
+
