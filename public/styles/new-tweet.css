@@ -1,4 +1,6 @@
 
+/* Styling Tweet Composing Section */
+
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -35,6 +37,8 @@
   border: none;
   font-size: large;
  }
+
+ /* Styling Counter if Less Than 0 */
 
  .counter-negative {
   color: red;
