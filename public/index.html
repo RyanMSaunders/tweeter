@@ -30,13 +30,10 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <!-- <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> -->
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar -->
     <nav>
       <span class="nav-title">tweeter</span>
       <div class="header-button">
@@ -55,11 +52,10 @@
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
-
+      
+      <!-- Compose Tweet -->
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" action="/tweets/">
           <div class="text-area">
             <label for="tweet-text">What are you humming about?</label>
@@ -72,7 +68,7 @@
         </form>
       </section>
     
-      <!-- <h2>Show Tweet</h2> -->
+      <!-- Show Tweet -->
       <section class="tweet-section">
         <article class="tweet">
           <header>
@@ -98,13 +94,7 @@
               </div>
           </footer>
         </article>
-
-
       </section>
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin sagittis justo, id lacinia mi. Nam viverra, dui laoreet fringilla pulvinar, sem quam rhoncus tortor, a sagittis dui tortor sed metus. Curabitur convallis magna ut elit rutrum consectetur. Suspendisse ut metus et nisl commodo iaculis sed a mi. Sed id auctor mi. Nunc ornare felis tortor, id hendrerit diam vehicula a. Fusce quis arcu ultrices massa rutrum condimentum ac a turpis. Quisque mollis convallis lacus a porta. Duis at dolor vel enim sollicitudin ultricies at vel arcu.
-        Cras imperdiet pretium quam, ac malesuada erat pulvinar ac. Praesent semper eros in tortor condimentum porttitor. Donec neque leo, lacinia non arcu et, dapibus facilisis odio. Donec egestas feugiat lacus non luctus. Curabitur ac ante sem. Nam a lectus bibendum, viverra erat at, auctor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus purus velit, egestas et massa a, accumsan consequat tellus.
-      
-      </p> -->
     </main>
 
     <!-- App JS -->
