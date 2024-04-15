@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -44,7 +45,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="profile">
       <div class="profile-image">
           <img src="/images/profile-hex.png" alt="User Profile Image"> 
       </div>
@@ -69,6 +70,36 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+    
+      <!-- <h2>Show Tweet</h2> -->
+      <section class="tweet-section">
+        <article class="tweet">
+          <header>
+            
+            <div class="user-identifier">
+              <img src="/images/user1-icon.png" alt="User Icon Image"> 
+              <p>Newton</p> 
+            </div>
+            <p>@SirIsaac</p>
+          </header>
+            <p>
+              Chandler gabion yard me mutiny lanyard pressgang pirate hang the jib grog blossom strike colors fire in the hole. 
+            </p>
+            <div id="tweet-divider">
+              <hr>
+            </div>
+          <footer class="tweet-footer">
+            <p>10 Days Ago</p>
+            <div class="footer-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <i class="fa-solid fa-heart"></i>
+              </div>
+          </footer>
+        </article>
+
+
       </section>
       <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin sagittis justo, id lacinia mi. Nam viverra, dui laoreet fringilla pulvinar, sem quam rhoncus tortor, a sagittis dui tortor sed metus. Curabitur convallis magna ut elit rutrum consectetur. Suspendisse ut metus et nisl commodo iaculis sed a mi. Sed id auctor mi. Nunc ornare felis tortor, id hendrerit diam vehicula a. Fusce quis arcu ultrices massa rutrum condimentum ac a turpis. Quisque mollis convallis lacus a porta. Duis at dolor vel enim sollicitudin ultricies at vel arcu.
         Cras imperdiet pretium quam, ac malesuada erat pulvinar ac. Praesent semper eros in tortor condimentum porttitor. Donec neque leo, lacinia non arcu et, dapibus facilisis odio. Donec egestas feugiat lacus non luctus. Curabitur ac ante sem. Nam a lectus bibendum, viverra erat at, auctor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus purus velit, egestas et massa a, accumsan consequat tellus.
