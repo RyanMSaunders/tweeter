@@ -5,15 +5,14 @@
   margin-top: 5%;
   margin-bottom: 5%;
   background-color: inherit;
-  border: 5px solid;
   margin-right: 0px;
   margin-left: 0px;
   width: 100%;
 }
 
 /* Hovering over tweet container */
-section.tweet-section:hover {
-  filter: drop-shadow(9px 6px 1px #adb8dc);
+section.tweet-section article.tweet:hover {
+  box-shadow: 9px 6px 1px #adb8dc;
 }
 
 /* Styling Items In Article */
@@ -22,10 +21,13 @@ section.tweet-section article.tweet {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 5px solid;
+  margin-bottom: 5%;
+
 }
 
 /* Styling Header */
