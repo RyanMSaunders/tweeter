@@ -11,7 +11,8 @@ nav {
   width: 100vw;
   color: #FFFFFF;
   background-color: #4056A1;
-  padding: 0px 1.5em
+  padding: 0px 1.5em;
+  z-index: 20;
 }
 
 .nav-title {
