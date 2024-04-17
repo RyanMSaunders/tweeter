@@ -8,30 +8,30 @@
 
 // Fake data taken from initial-tweets.json
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd" },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ];
 
  
 $(document).ready(function() {
@@ -54,7 +54,7 @@ let $tweet = `
       <hr>
     </div>
   <footer class="tweet-footer">
-    <p>${tweet.created_at}</p>
+    <p>${timeago.format(tweet.created_at)}</p>
     <div class="footer-icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-arrows-rotate"></i>
@@ -76,7 +76,61 @@ const renderTweets = function(tweets) {
 
 };
 
+const loadTweets = function() {
+  $.ajax('/tweets', { method: 'GET' })
+    .then(function (tweets) {
+      // const tweetsParsed = JSON.parse(tweets)
+      console.log('Success: ', tweets);
+      renderTweets(tweets)
+    });
 
-renderTweets(data);
+}
+
+console.log(loadTweets());
+
+
+// renderTweets(data);
+
+$(".tweet-form").submit(function(event) {
+  event.preventDefault();
+  let newTweetSerialized = $( this ).serialize()
+  console.log('Test', newTweetSerialized)
+  $.ajax({
+    type: "POST", // Specifies the method type
+    url: "/tweets", // The endpoint where the data should be submitted
+    data: newTweetSerialized, // Your serialized form data variable
+    success: function(response) {
+      // Code to execute if the request is successful
+      console.log("Data sent successfully!");
+    },
+    error: function(xhr, status, error) {
+      // Code to execute if the request fails
+      console.error("Error sending data: ", error);
+    }
+  });
+
+  })
+
+
+
 
 });
+
+
+// $( ".tweet-form" ).on( "submit", function( event ) {
+//   console.log('Form submitted, performing ajax call...');
+//   $.post('index.html', function (data));
+//   event.preventDefault();
+// });
+
+// });
+
+// const $button = $('#load-more-posts');
+//   $button.on('click', function () {
+//     console.log('Button clicked, performing ajax call...');
+//     $.ajax('more-posts.html', { method: 'GET' })
+//     .then(function (morePostsHtml) {
+//       console.log('Success: ', morePostsHtml);
+//       $button.replaceWith(morePostsHtml);
+//     });
+//   });
