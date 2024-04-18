@@ -98,15 +98,24 @@ console.log(loadTweets());
 $(".tweet-form").submit(function(event) {
   event.preventDefault();
   let $textFromUser = $('#tweet-text').val().trim();
-  let $newTweet = $("<div>").text($textFromUser);
+  let $newTweet = $("<div>").text($textFromUser).text();
 
   let $newTweetLength = $newTweet.length;
+  console.log($newTweet);
+  console.log($newTweetLength);
 
   if ($newTweetLength === 0) {
-    alert('Please enter a tweet before submitting.');
+    // alert('Please enter a tweet before submitting.');
+    $( ".error-message" ).addClass( "show" );
+    $('.error-message').html(`<i class="fa-solid fa-triangle-exclamation "></i> Please enter a tweet before submitting. <i class="fa-solid fa-triangle-exclamation"></i> `);
+    $('.error-message').hide().slideDown(400, 'swing');
     event.preventDefault();
+
   } else if ($newTweetLength > 140) {
-    alert('Your tweet has exceeded the maximum 140 characters.');
+    // alert('Your tweet has exceeded the maximum 140 characters.');
+    $( ".error-message" ).addClass( "show" );
+    $('.error-message').html(`<i class="fa-solid fa-triangle-exclamation "></i> Your tweet has exceeded the maximum 140 characters. <i class="fa-solid fa-triangle-exclamation "></i>`);
+    $('.error-message').hide().slideDown(400, 'swing');
     event.preventDefault();
   } else {
     let newTweetSerialized = $( this ).serialize()
