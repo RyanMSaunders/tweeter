@@ -71,7 +71,7 @@ const renderTweets = function(tweets) {
  
   for (let val of tweets) {
     const $tweet = createTweetElement(val);
-    $('.tweet-section').append($tweet);
+    $('.tweet-section').prepend($tweet);
   }
 
 };
@@ -92,13 +92,13 @@ console.log(loadTweets());
 
 $(".tweet-form").submit(function(event) {
   event.preventDefault();
-  let newTweet = $('#tweet-text').val();
-  let newTweetLength = newTweet.length;
+  let $newTweet = $('#tweet-text').val().trim();
+  let $newTweetLength = $newTweet.length;
 
-  if (newTweetLength === 0) {
+  if ($newTweetLength === 0) {
     alert('Please enter a tweet before submitting.');
     event.preventDefault();
-  } else if (newTweetLength > 140) {
+  } else if ($newTweetLength > 140) {
     alert('Your tweet has exceeded the maximum 140 characters.');
     event.preventDefault();
   } else {
@@ -111,6 +111,9 @@ $(".tweet-form").submit(function(event) {
       success: function(response) {
       // Code to execute if the request is successful
       console.log("Data sent successfully!");
+      $('#tweet-text').val('')
+      loadTweets()
+      // $('.tweet-section').prepend(renderTweets());
       },
       error: function(xhr, status, error) {
       // Code to execute if the request fails
