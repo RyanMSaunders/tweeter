@@ -37,18 +37,22 @@
 $(document).ready(function() {
 
 const createTweetElement = function(tweet) {
+  const encodedUserName = $('<div>').text(tweet.user.name).html();
+  const encodedTweetText = $('<div>').text(tweet.content.text).html();
+  const encodedUserHandle = $('<div>').text(tweet.user.handle).html();
+
 let $tweet = `
 
 <article class="tweet">
   <header>
     <div class="user-identifier">
       <img src="${tweet.user.avatars}" alt="User Icon Image"> 
-      <p>${tweet.user.name}</p> 
+      <p>${encodedUserName}</p> 
     </div>
-    <p>${tweet.user.handle}</p>
+    <p>${encodedUserHandle}</p>
   </header>
     <p>
-      ${tweet.content.text}
+      ${encodedTweetText}
     </p>
     <div id="tweet-divider">
       <hr>
@@ -81,6 +85,7 @@ const loadTweets = function() {
     .then(function (tweets) {
       // const tweetsParsed = JSON.parse(tweets)
       console.log('Success: ', tweets);
+      $('.tweet-section').empty()
       renderTweets(tweets)
     });
 }
@@ -92,7 +97,9 @@ console.log(loadTweets());
 
 $(".tweet-form").submit(function(event) {
   event.preventDefault();
-  let $newTweet = $('#tweet-text').val().trim();
+  let $textFromUser = $('#tweet-text').val().trim();
+  let $newTweet = $("<div>").text($textFromUser);
+
   let $newTweetLength = $newTweet.length;
 
   if ($newTweetLength === 0) {
