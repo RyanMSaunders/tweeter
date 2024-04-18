@@ -83,7 +83,6 @@ const loadTweets = function() {
       console.log('Success: ', tweets);
       renderTweets(tweets)
     });
-
 }
 
 console.log(loadTweets());
@@ -93,23 +92,33 @@ console.log(loadTweets());
 
 $(".tweet-form").submit(function(event) {
   event.preventDefault();
-  let newTweetSerialized = $( this ).serialize()
-  console.log('Test', newTweetSerialized)
-  $.ajax({
-    type: "POST", // Specifies the method type
-    url: "/tweets", // The endpoint where the data should be submitted
-    data: newTweetSerialized, // Your serialized form data variable
-    success: function(response) {
+  let newTweet = $('#tweet-text').val();
+  let newTweetLength = newTweet.length;
+
+  if (newTweetLength === 0) {
+    alert('Please enter a tweet before submitting.');
+    event.preventDefault();
+  } else if (newTweetLength > 140) {
+    alert('Your tweet has exceeded the maximum 140 characters.');
+    event.preventDefault();
+  } else {
+    let newTweetSerialized = $( this ).serialize()
+    console.log('Test', newTweetSerialized)
+    $.ajax({
+      type: "POST", // Specifies the method type
+      url: "/tweets", // The endpoint where the data should be submitted
+      data: newTweetSerialized, // Your serialized form data variable
+      success: function(response) {
       // Code to execute if the request is successful
       console.log("Data sent successfully!");
-    },
-    error: function(xhr, status, error) {
+      },
+      error: function(xhr, status, error) {
       // Code to execute if the request fails
       console.error("Error sending data: ", error);
-    }
-  });
-
-  })
+      }
+    });
+  }
+})
 
 
 
