@@ -1,5 +1,9 @@
 
+
+/* @media only screen and (max-width: 1024px) { */
+
 /* Styling Nav Bar */
+/* Tablet */
 
 nav {
   position: fixed;
@@ -10,7 +14,7 @@ nav {
   height: 120px;
   width: 100vw;
   color: #FFFFFF;
-  background-color: #4056A1;
+  /* background-color: #4056A1; */
   padding: 0px 1.5em;
   z-index: 20;
 }
@@ -36,4 +40,16 @@ nav {
 
 .header-button > p {
   margin-bottom: 0px
+}
+
+
+
+/* Laptops / Desktops */
+@media only screen and (min-width: 1200px) {
+  
+  nav {
+    background-color: #4056A1;
+  }
+  
+
 }
