@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Desktop Layout"](https://github.com/RyanMSaunders/tweeter/blob/master/docs/tweeter-desktop3.png?raw=true)
+!["Desktop Layout"](https://github.com/RyanMSaunders/tweeter/blob/master/docs/tweeter-desktop4.png?raw=true)
 
 
 !["Mobile Layout"](https://github.com/RyanMSaunders/tweeter/blob/master/docs/tweeter-mobile1.png?raw=true)
