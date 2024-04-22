@@ -92,6 +92,11 @@ const loadTweets = function() {
 
 console.log(loadTweets());
 
+const clearErrorMessage = function() {
+  $('.text-area').on('input', function() {
+    $('.error-message').slideUp()
+  });
+}
 
 // renderTweets(data);
 
@@ -109,6 +114,7 @@ $(".tweet-form").submit(function(event) {
     $( ".error-message" ).addClass( "show" );
     $('.error-message').html(`<i class="fa-solid fa-triangle-exclamation "></i> Please enter a tweet before submitting. <i class="fa-solid fa-triangle-exclamation"></i> `);
     $('.error-message').hide().slideDown(400, 'swing');
+    clearErrorMessage()
     event.preventDefault();
 
   } else if ($newTweetLength > 140) {
@@ -116,6 +122,7 @@ $(".tweet-form").submit(function(event) {
     $( ".error-message" ).addClass( "show" );
     $('.error-message').html(`<i class="fa-solid fa-triangle-exclamation "></i> Your tweet has exceeded the maximum 140 characters. <i class="fa-solid fa-triangle-exclamation "></i>`);
     $('.error-message').hide().slideDown(400, 'swing');
+    clearErrorMessage()
     event.preventDefault();
   } else {
     let newTweetSerialized = $( this ).serialize()
