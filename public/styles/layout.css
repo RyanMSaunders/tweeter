@@ -3,6 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+ 
 html {
   box-sizing: border-box;
 }
@@ -29,6 +31,9 @@ body nav {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* Tablet */
+
+
  main {
   display: flex;
   flex-direction: column;
@@ -40,4 +45,19 @@ body nav {
   background-color: inherit;
  }
 
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1200px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+
+  .right {
+    float: right;
+    margin-top: 15%;
+
+  }
+
+  /* .left {
+    float: left;
+  } */
+}
  
