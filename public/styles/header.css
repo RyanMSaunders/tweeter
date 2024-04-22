@@ -1,4 +1,6 @@
 
+/* Tablet */
+
 header.profile {
   display: flex;
   flex-direction: column;
@@ -8,4 +10,25 @@ header.profile {
   height: 520px;
   width: 100%;
   background-image: url('../images/tweeter-bg-2.png');
+  color: aliceblue;
+}
+
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1200px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  header.profile.left{
+    /* display: block; */
+    float: left;
+    width: 30%;
+    min-width: 15%;
+    margin-top: 15%;
+    padding-top: 0px;
+    height: 420px;
+    margin-left: 5%;
+  }
+
+  .user-name {
+    margin-top: 0px;
+  }
 }
