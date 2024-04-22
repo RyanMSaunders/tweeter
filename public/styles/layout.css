@@ -33,7 +33,6 @@ body nav {
 
  /* Tablet */
 
-
  main {
   display: flex;
   flex-direction: column;
@@ -46,18 +45,12 @@ body nav {
  }
 
 
-/* Laptops / Desktops: minimum width of 1024px */
+/* Laptops / Desktops */
 @media only screen and (min-width: 1200px) {
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-
   .right {
     float: right;
     margin-top: 15%;
 
   }
-
-  /* .left {
-    float: left;
-  } */
 }
  
