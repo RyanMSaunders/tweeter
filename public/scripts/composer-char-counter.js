@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   
-
+  // Handling input event by returning the amount of characters left, via the counter. Adding class if less than 0.
   $(".text-area").on("input", function() {
     const $textarea = $(this).find('textarea');
     const textLength = $textarea.val().length;
