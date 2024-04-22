@@ -1,13 +1,10 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Client-side JS logic 
  */
 
-
- 
 $(document).ready(function() {
 
+  // createTweetElement function that creates a formatted HTML article for new tweets submitted.
   const createTweetElement = function(tweet) {
     const encodedUserName = $('<div>').text(tweet.user.name).html();
     const encodedTweetText = $('<div>').text(tweet.content.text).html();
@@ -42,7 +39,7 @@ $(document).ready(function() {
   return $tweet;
   };
 
-
+ // renderTweets function that prepends tweets to beginning of tweet section
   const renderTweets = function(tweets) {
   
     for (let val of tweets) {
@@ -52,6 +49,7 @@ $(document).ready(function() {
 
   };
 
+  // loadTweets function that performs ajax request to render tweets
   const loadTweets = function() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function(tweets) {
@@ -61,15 +59,18 @@ $(document).ready(function() {
       });
   };
 
-  console.log(loadTweets());
+  loadTweets();
 
+  // clearErrorMessage function that slides up the error message when user begins to input in text area
   const clearErrorMessage = function() {
     $('.text-area').on('input', function() {
       $('.error-message').slideUp();
     });
   };
 
-
+  // Handling submit event by calling loadTweets() and returning counter number to 140.
+  // If tweet length is 0, returning error
+  // If tweet length is above 140, returning error
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
     let $textFromUser = $('#tweet-text').val().trim();
@@ -92,9 +93,8 @@ $(document).ready(function() {
       $('.error-message').hide().slideDown(400, 'swing');
       clearErrorMessage();
       event.preventDefault();
-    } else {
+    } else { 
       let newTweetSerialized = $(this).serialize();
-      console.log('Test', newTweetSerialized);
       $.ajax({
         type: "POST",
         url: "/tweets",
@@ -103,6 +103,7 @@ $(document).ready(function() {
         console.log("Data sent successfully!");
         $('#tweet-text').val('');
         loadTweets()
+        $('.counter').val(140);
         },
         error: function(xhr, status, error) {
         console.error("Error sending data: ", error);
