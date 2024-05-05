@@ -36,8 +36,10 @@ article.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
+
 
 article.tweet div.user-identifier {
   display: flex;
