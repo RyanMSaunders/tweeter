@@ -13,6 +13,13 @@ header.profile {
   color: aliceblue;
 }
 
+/* User Name */
+
+h2.user-name span {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 200;
+}
+
 
 /* Laptops / Desktops */
 @media only screen and (min-width: 1200px) {
