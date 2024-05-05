@@ -38,13 +38,13 @@
   font-size: large;
  }
 
- /* Styling Counter if Less Than 0 */
+ /* Styling Counter if Less Character Count Than 0 */
 
  .counter-negative {
   color: red;
  }
 
- /* Error Message */
+ /* Error Message If New Tweet Length is 0 or Over 140 Characters */
  
  .error-message.show {
   color: red;
