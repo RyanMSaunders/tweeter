@@ -27,7 +27,6 @@ section.tweet-section article.tweet {
   padding-bottom: 2%;
   border: 5px solid;
   margin-bottom: 5%;
-
 }
 
 /* Styling Header */
@@ -37,7 +36,6 @@ article.tweet header {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 
@@ -56,6 +54,10 @@ article.tweet img {
 
 article.tweet header > p {
   opacity: 50%;
+}
+
+article.tweet > p {
+  word-wrap: break-word;
 }
 
 /* Styling hr element */
